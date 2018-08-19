@@ -23,7 +23,11 @@ public abstract class AbstractApplicationContext implements ApplicationContext {
 		
 		return factory.getBean(beanID);
 	}
-	
+	/**
+	 * 抽象方法--把类路径、xml文件变成resource流
+	 * @param path
+	 * @return
+	 */
 	protected abstract Resource getResourceByPath(String path);
 	
 	public void setBeanClassLoader(ClassLoader beanClassLoader) {
